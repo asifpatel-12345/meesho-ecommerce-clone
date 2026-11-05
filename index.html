@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meesho - Online Shopping for Fashion, Electronics & Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="top-bar">
+    <p>⚡ Lowest Prices • Free Delivery • Easy Returns • Cash on Delivery Available</p>
+  </div>
+
+  <!-- Main Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#">meesho</a>
+      </div>
+
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Try Saree, Kurti, Smartwatch or Search by Product Code..." />
+      </div>
+
+      <div class="nav-actions">
+        <button class="nav-btn" id="supplierBtn">
+          <i class="fa-solid fa-shop"></i>
+          <span>Become a Supplier</span>
+        </button>
+        <div class="nav-item">
+          <i class="fa-regular fa-user"></i>
+          <span>Profile</span>
+        </div>
+        <div class="nav-item cart-icon" id="cartToggle">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Cart</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Categories Bar -->
+  <nav class="categories-bar">
+    <button class="cat-chip active" data-category="all">All Products</button>
+    <button class="cat-chip" data-category="women">Women Ethnic</button>
+    <button class="cat-chip" data-category="men">Men Fashion</button>
+    <button class="cat-chip" data-category="electronics">Electronics</button>
+    <button class="cat-chip" data-category="footwear">Footwear</button>
+  </nav>
+
+  <!-- Main Showcase Hero -->
+  <section class="hero-banner">
+    <div class="hero-content">
+      <span class="badge">Lowest Prices Guaranteed</span>
+      <h1>Lowest Prices Best Quality Shopping</h1>
+      <p>50 Lakh+ High Quality Products Across 500+ Categories</p>
+      <a href="#productsSection" class="btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- Main Grid & Filtering -->
+  <main class="main-content" id="productsSection">
+    <aside class="filters-sidebar">
+      <h3><i class="fa-solid fa-sliders"></i> Filters</h3>
+      <div class="filter-group">
+        <label for="priceSort">Sort By Price</label>
+        <select id="priceSort">
+          <option value="default">Relevance</option>
+          <option value="low-high">Price: Low to High</option>
+          <option value="high-low">Price: High to Low</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Delivery</label>
+        <div class="checkbox-item">
+          <input type="checkbox" id="freeDeliveryFilter" />
+          <label for="freeDeliveryFilter">Free Delivery Only</label>
+        </div>
+      </div>
+    </aside>
+
+    <section class="products-container">
+      <div class="section-title">
+        <h2>Products For You</h2>
+        <span id="productCount">Showing all items</span>
+      </div>
+      <div class="products-grid" id="productsGrid">
+        <!-- JS Dynamic Injection -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Slide Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Shopping Cart (<span id="cartHeaderCount">0</span>)</h3>
+      <button class="close-cart" id="closeCart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItemsContainer">
+      <!-- JS Dynamic Cart Content -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total Amount:</span>
+        <strong id="cartTotalPrice">₹0</strong>
+      </div>
+      <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Shop Non-Stop on Meesho</h3>
+        <p>Trusted by millions of resellers and customers across India for affordable fashion, gadgets, and home essential products.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Careers & Legal</h4>
+        <ul>
+          <li><a href="#">Become a Supplier</a></li>
+          <li><a href="#">Hall of Fame</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Reach Out to Us</h4>
+        <div class="social-links">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Meesho Clone. Built with HTML, CSS, JavaScript for Portfolio Showcase.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
